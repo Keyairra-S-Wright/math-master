@@ -1230,9 +1230,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - fact: 5+ 5 * 5 - 3 = 27
+    isTrue: 1
+  - fact: 10^2 = 100
+    isTrue: 0
+  - fact: 24 / 10 = 0.24
+    isTrue: 0
+  factText: {fileID: 0}
 --- !u!4 &768075566
 Transform:
   m_ObjectHideFlags: 0

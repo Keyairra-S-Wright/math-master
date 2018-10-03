@@ -449,7 +449,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 303207260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 768075565}
+        m_MethodName: UserSelectFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &303207260
@@ -734,7 +745,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 420112180}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 768075565}
+        m_MethodName: UserSelectTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &420112180
@@ -912,7 +934,7 @@ GameObject:
   - component: {fileID: 664109060}
   - component: {fileID: 664109059}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Fact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1236,7 +1258,7 @@ MonoBehaviour:
     isTrue: 0
   - fact: 24 / 10 = 0.24
     isTrue: 0
-  factText: {fileID: 0}
+  factText: {fileID: 664109059}
 --- !u!4 &768075566
 Transform:
   m_ObjectHideFlags: 0

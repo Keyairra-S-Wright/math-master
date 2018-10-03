@@ -32,4 +32,28 @@ public class GameManagement : MonoBehaviour {
         factText.text = currentQuestion.fact;
         unansweredQuestions.RemoveAt(randomQuestionIndex); //this removes questions from the list once they are answered
     }
+
+    public void UserSelectTrue(){
+        if (currentQuestion.isTrue)
+        {
+            Debug.Log("CORRECT!");
+        }
+        else 
+        {
+            Debug.Log("WRONG!");
+        }
+    }
+
+    public void UserSelectFalse()
+    {
+        if (!currentQuestion.isTrue) //is not true
+        {
+            Debug.Log("CORRECT!");
+        }
+
+        else
+        {
+            Debug.Log("WRONG!");
+        }
+    }
 }

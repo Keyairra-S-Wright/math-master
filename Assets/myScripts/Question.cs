@@ -1,18 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
 [System.Serializable]
+public class Question {
 
-public class Question : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public string fact;
+    public bool isTrue;
 }

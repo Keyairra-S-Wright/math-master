@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManagement : MonoBehaviour {
@@ -14,6 +15,9 @@ public class GameManagement : MonoBehaviour {
 
     [SerializeField]
     private Text factText;
+
+    [SerializeField]
+    private float timeBetweenQuestions = 1f;
 
     private void Start()
     {
@@ -30,7 +34,12 @@ public class GameManagement : MonoBehaviour {
         currentQuestion = unansweredQuestions[randomQuestionIndex];
 
         factText.text = currentQuestion.fact;
-        unansweredQuestions.RemoveAt(randomQuestionIndex); //this removes questions from the list once they are answered
+            }
+
+    IEnumerator TransitionToNextQuestion(){
+        unansweredQuestions.Remove(currentQuestion); //this removes questions from the list once they are answered
+        yield return new WaitForSeconds(timeBetweenQuestions);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void UserSelectTrue(){
@@ -42,6 +51,8 @@ public class GameManagement : MonoBehaviour {
         {
             Debug.Log("WRONG!");
         }
+
+        StartCoroutine(TransitionToNextQuestion());
     }
 
     public void UserSelectFalse()
@@ -55,5 +66,6 @@ public class GameManagement : MonoBehaviour {
         {
             Debug.Log("WRONG!");
         }
+        StartCoroutine(TransitionToNextQuestion());
     }
 }

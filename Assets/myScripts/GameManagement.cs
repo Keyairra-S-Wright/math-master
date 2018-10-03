@@ -80,7 +80,6 @@ public class GameManagement : MonoBehaviour {
     IEnumerator TransitionToNextQuestion(){
         unansweredQuestions.Remove(currentQuestion); //this removes questions from the list once they are answered
         yield return new WaitForSeconds(timeBetweenQuestions);
-        Score.scoreValue += 10;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -89,6 +88,7 @@ public class GameManagement : MonoBehaviour {
         if (currentQuestion.isTrue)
         {
             //use the score here
+            Score.scoreValue += 10;
             Debug.Log("CORRECT!");
         }
         else 
@@ -105,6 +105,7 @@ public class GameManagement : MonoBehaviour {
         if (!currentQuestion.isTrue) //is not true
         {
             //user score here
+            Score.scoreValue += 10;
             Debug.Log("CORRECT!");
         }
 

@@ -955,8 +955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 14.63}
-  m_SizeDelta: {x: 485, y: 59.95}
+  m_AnchoredPosition: {x: 0, y: 14.332}
+  m_SizeDelta: {x: 485, y: 72.437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664109059
 MonoBehaviour:
@@ -979,7 +979,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: fbe3c09b43ce4304e86e7496c81bb9ed, type: 3}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1252,13 +1252,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - fact: 5+ 5 * 5 - 3 = 27
+  - fact: We can divide 456 by 2.
     isTrue: 1
-  - fact: 10^2 = 100
+  - fact: We can divide 123456789 by 3.
+    isTrue: 1
+  - fact: 54367838 is divisible by 4.
     isTrue: 0
-  - fact: 24 / 10 = 0.24
+  - fact: 9163690124 is divisble by 6.
     isTrue: 0
+  - fact: We can divide 9163627 by 11.
+    isTrue: 1
+  - fact: In 3 days, nine donkeys eat 27 bags of food. So, five donkeys would need
+      24 bags of food for 5 days.
+    isTrue: 0
+  - fact: 12312312325 is divisible by 25.
+    isTrue: 1
+  - fact: The number 987645 is the largest six-digit number that can be created with
+      these values.
+    isTrue: 0
+  - fact: A three digit number exisits, where each of the digits are different and
+      those digits combined form a number that is divisible by 4.
+    isTrue: 1
+  - fact: 'There is a way to place brackets around this equation so that it is true:
+      15 -35 + 5 / 4 = 5'
+    isTrue: 1
   factText: {fileID: 664109059}
+  timeBetweenQuestions: 1
 --- !u!4 &768075566
 Transform:
   m_ObjectHideFlags: 0

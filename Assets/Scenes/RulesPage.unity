@@ -145,8 +145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -23}
-  m_SizeDelta: {x: 413, y: 167.6}
+  m_AnchoredPosition: {x: 10.5, y: -21.625}
+  m_SizeDelta: {x: 416.1, y: 170.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157611427
 MonoBehaviour:
@@ -181,7 +181,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Read the math and logic statements carefully.  All statements will either
-    be TRUE or FALSE. Earn 100 points and you win!
+    be TRUE or FALSE. Earn 100 points and less than 4 penalties to win.
 --- !u!222 &157611428
 CanvasRenderer:
   m_ObjectHideFlags: 0

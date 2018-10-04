@@ -19,8 +19,6 @@ public class Penalty : MonoBehaviour
         fail = GetComponent<Text>();
         failText.text = "";
 
-
-        //We are never hitting this debug.log statement in the console
         if (failValue >= failScore)
         {
             Debug.Log("GameOver");

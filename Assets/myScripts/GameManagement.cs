@@ -45,10 +45,6 @@ public class GameManagement : MonoBehaviour {
 
     private void Start()
     {
-        //DontDestroyOnLoad(gameObject);
-        //SceneManager.LoadScene("MenuScreen");
-
-        //playerScore = 0;
 
         if (unansweredQuestions == null || unansweredQuestions.Count == 0){
             unansweredQuestions = questions.ToList<Question>();
@@ -73,21 +69,19 @@ public class GameManagement : MonoBehaviour {
             trueAnswerText.text = "Wrong";
             falseAnswerText.text = "You're Correct!";
         }
-
-        //Player score may go here based on falseAnwerText.text or trueAnswerText.text == "You're Correct!"
      }
 
     IEnumerator TransitionToNextQuestion(){
         unansweredQuestions.Remove(currentQuestion); //this removes questions from the list once they are answered
         yield return new WaitForSeconds(timeBetweenQuestions);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     public void UserSelectTrue(){
         animator.SetTrigger("True");
         if (currentQuestion.isTrue)
         {
-            //use the score here
             Score.scoreValue += 10;
             Debug.Log("CORRECT!");
         }
@@ -104,7 +98,7 @@ public class GameManagement : MonoBehaviour {
         animator.SetTrigger("False");
         if (!currentQuestion.isTrue) //is not true
         {
-            //user score here
+
             Score.scoreValue += 10;
             Debug.Log("CORRECT!");
         }

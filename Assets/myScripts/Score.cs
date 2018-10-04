@@ -8,19 +8,33 @@ public class Score : MonoBehaviour
 {
 
     public Text scoreText;
+    public Text failText;//
 
     public static int scoreValue = 0;
     public int endScore = 100;
+
+    public static int failValue = 0;//
+    public int failScore = 40;//
+
     Text score;
+    Text fail;//
 
     void Start()
     {
         score = GetComponent<Text>();
         scoreText.text = "";
-        Debug.Log(score);
+
+        fail = GetComponent<Text>();
+        failText.text = "";
+
         if (scoreValue >= endScore) 
         {
             EndGame();
+        }
+
+        if (failValue >= failScore)
+        {
+            GameOver();
         }
     }
 
@@ -32,6 +46,11 @@ public class Score : MonoBehaviour
     void EndGame()
     {
         SceneManager.LoadScene("EndingScene");
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
 }

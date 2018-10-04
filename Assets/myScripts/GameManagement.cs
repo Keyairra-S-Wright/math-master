@@ -87,6 +87,7 @@ public class GameManagement : MonoBehaviour {
         }
         else 
         {
+            Score.failValue += 10;
             Debug.Log("WRONG!");
         }
 
@@ -105,8 +106,13 @@ public class GameManagement : MonoBehaviour {
 
         else
         {
+            Score.failValue += 10;
             Debug.Log("WRONG!");
         }
         StartCoroutine(TransitionToNextQuestion());
+    }
+
+    public void EndGame(){
+        Debug.Log("Game Over");
     }
 }

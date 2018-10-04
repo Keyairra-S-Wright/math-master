@@ -1268,7 +1268,7 @@ MonoBehaviour:
   - fact: 12312312325 is divisible by 25.
     isTrue: 1
   - fact: The number 987645 is the largest six-digit number that can be created with
-      these values.
+      those digits.
     isTrue: 0
   - fact: A three digit number exisits, where each of the digits are different and
       those digits combined form a number that is divisible by 4.
@@ -1279,20 +1279,20 @@ MonoBehaviour:
   - fact: A two-digit number has tens of two times the ones. This number is divisible
       by 3.
     isTrue: 1
-  - fact: 'If each digit is used exactly once, it is possible to make one two-digit
-      number and one three-digit number from the digits 1, 2, 3, 4, 5 and that three-digit
-      number is divisible by the three-digit. '
+  - fact: 'If each digit is used exactly once, it is possible to make 1 two-digit
+      number and 1 three-digit number from the digits 1, 2, 3, 4, 5 AND that three-digit
+      number is divisible by the two-digit number. '
     isTrue: 1
   - fact: Pepper was stolen from the emporer. As you know, those who steal pepper,
       always lie. A spokesman said he know who stole the pepper. He is the theif.
     isTrue: 0
-  - fact: There are three fathers and three sons in a room.  It is possible that there
-      are only three people in the room.
+  - fact: There are three fathers and three sons in a room.  There must be exactly
+      six people in the room.
     isTrue: 0
   - fact: The grandchildren, grandma, and grandpa live on 3 different floors. The
-      grandpa dosn't live on the 1st or 3rd floor. The grandpa lives higher than the
-      grandma. The grandchildren live on the 1st floor.
-    isTrue: 1
+      grandpa does not live on the 1st or 3rd floor. The grandpa lives higher than
+      the grandma. The grandchildren live on the 1st floor.
+    isTrue: 0
   - fact: There are two buckets with a capacity of 4 and 9 liters. We can bring exactly
       6 liters of water from the lake using only these buckets.
     isTrue: 1
@@ -1300,8 +1300,8 @@ MonoBehaviour:
       than the real ones. You can determine a fake coin by using only the coins and
       weightless-scale.
     isTrue: 1
-  - fact: A flock of geese flew; one goose was in front and two were behind; one goose
-      was between two and three in a row. There are 9 geese.
+  - fact: A flock of geese flew. A goose was in front and two other geese. A goose
+      was between two other geese that were flying in a row. There must be 6 geese.
     isTrue: 0
   factText: {fileID: 664109059}
   trueAnswerText: {fileID: 1808860961}
@@ -1333,9 +1333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2120462177}
-  failText: {fileID: 0}
   endScore: 100
-  failScore: 4
 --- !u!114 &768075568
 MonoBehaviour:
   m_ObjectHideFlags: 0

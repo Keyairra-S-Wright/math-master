@@ -56,11 +56,17 @@ public class GameManagement : MonoBehaviour {
      }
 
     IEnumerator TransitionToNextQuestion(){
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         unansweredQuestions.Remove(currentQuestion); //this removes questions from the list once they are answered
         yield return new WaitForSeconds(timeBetweenQuestions);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
     }
+
+
 
     public void UserSelectTrue(){
         animator.SetTrigger("True");
